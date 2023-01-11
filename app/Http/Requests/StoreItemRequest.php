@@ -13,18 +13,20 @@ class StoreItemRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
-     * Get the validation rules that apply to the request.
+     * バリデーション
      *
      * @return array<string, mixed>
      */
     public function rules()
     {
         return [
-            //
+            'name' => ['required', 'max:50'],
+            'memo' => ['required', 'max:255'],
+            'price' => ['required', 'numeric']
         ];
     }
 }
