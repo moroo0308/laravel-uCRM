@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
                 UserSeeder::class,
                 ItemSeeder::class
         ]);
-
-        // \App\Models\User::factory(10)->create();
+        // 1000件カスタマーデータ作成
+        \App\Models\Customer::factory(1000)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
